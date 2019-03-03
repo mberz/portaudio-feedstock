@@ -9,7 +9,7 @@ echo "C compiler: ${CC}"
 echo "C++ compiler: ${CXX}"
 echo "Link path: ${PREFIX}/lib"
 
-./configure --prefix="${PREFIX}" CC="${CC}" CXX="${CXX}"
+./configure --prefix="${PREFIX}" --with-winapi=asio --with-asiodir="${PREFIX}/asio/" CC="${CC}" CXX="${CXX}"
 
 make -j$CPU_COUNT
 make tests -j$CPU_COUNT
